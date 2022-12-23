@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		181D602C2947638B001E0F39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D602B2947638B001E0F39 /* AppDelegate.swift */; };
-		181D602E2947638B001E0F39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D602D2947638B001E0F39 /* SceneDelegate.swift */; };
-		181D60302947638B001E0F39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D602F2947638B001E0F39 /* ViewController.swift */; };
-		181D60332947638B001E0F39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181D60312947638B001E0F39 /* Main.storyboard */; };
+		181D60302947638B001E0F39 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D602F2947638B001E0F39 /* LoginVC.swift */; };
 		181D60352947638D001E0F39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181D60342947638D001E0F39 /* Assets.xcassets */; };
 		181D60382947638D001E0F39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181D60362947638D001E0F39 /* LaunchScreen.storyboard */; };
+		18B697502955DD9300DC9B3A /* BirthdayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B6974F2955DD9300DC9B3A /* BirthdayVC.swift */; };
+		18B697522955DDBA00DC9B3A /* AddNewContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B697512955DDBA00DC9B3A /* AddNewContactVC.swift */; };
+		18B697542955DDE000DC9B3A /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B697532955DDE000DC9B3A /* UITextField+Extension.swift */; };
+		18B697562955DE0300DC9B3A /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B697552955DE0300DC9B3A /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		181D60282947638B001E0F39 /* repochka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = repochka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181D602B2947638B001E0F39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		181D602D2947638B001E0F39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		181D602F2947638B001E0F39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		181D60322947638B001E0F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		181D602F2947638B001E0F39 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		181D60342947638D001E0F39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		181D60372947638D001E0F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		181D60392947638D001E0F39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18B6974F2955DD9300DC9B3A /* BirthdayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayVC.swift; sourceTree = "<group>"; };
+		18B697512955DDBA00DC9B3A /* AddNewContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewContactVC.swift; sourceTree = "<group>"; };
+		18B697532955DDE000DC9B3A /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		18B697552955DE0300DC9B3A /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,25 @@
 		181D602A2947638B001E0F39 /* repochka */ = {
 			isa = PBXGroup;
 			children = (
-				181D602B2947638B001E0F39 /* AppDelegate.swift */,
-				181D602D2947638B001E0F39 /* SceneDelegate.swift */,
-				181D602F2947638B001E0F39 /* ViewController.swift */,
-				181D60312947638B001E0F39 /* Main.storyboard */,
+				181D602F2947638B001E0F39 /* LoginVC.swift */,
+				18B6974F2955DD9300DC9B3A /* BirthdayVC.swift */,
+				18B697512955DDBA00DC9B3A /* AddNewContactVC.swift */,
+				18B697532955DDE000DC9B3A /* UITextField+Extension.swift */,
+				18B697552955DE0300DC9B3A /* UIViewController+Extension.swift */,
 				181D60342947638D001E0F39 /* Assets.xcassets */,
 				181D60362947638D001E0F39 /* LaunchScreen.storyboard */,
 				181D60392947638D001E0F39 /* Info.plist */,
+				18B6974E2955DD1100DC9B3A /* resources */,
 			);
 			path = repochka;
+			sourceTree = "<group>";
+		};
+		18B6974E2955DD1100DC9B3A /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				181D602B2947638B001E0F39 /* AppDelegate.swift */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +141,6 @@
 			files = (
 				181D60382947638D001E0F39 /* LaunchScreen.storyboard in Resources */,
 				181D60352947638D001E0F39 /* Assets.xcassets in Resources */,
-				181D60332947638B001E0F39 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +151,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				181D60302947638B001E0F39 /* ViewController.swift in Sources */,
+				18B697522955DDBA00DC9B3A /* AddNewContactVC.swift in Sources */,
+				181D60302947638B001E0F39 /* LoginVC.swift in Sources */,
 				181D602C2947638B001E0F39 /* AppDelegate.swift in Sources */,
-				181D602E2947638B001E0F39 /* SceneDelegate.swift in Sources */,
+				18B697542955DDE000DC9B3A /* UITextField+Extension.swift in Sources */,
+				18B697562955DE0300DC9B3A /* UIViewController+Extension.swift in Sources */,
+				18B697502955DD9300DC9B3A /* BirthdayVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		181D60312947638B001E0F39 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				181D60322947638B001E0F39 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		181D60362947638D001E0F39 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,9 +300,9 @@
 				INFOPLIST_FILE = repochka/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,9 +328,9 @@
 				INFOPLIST_FILE = repochka/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
