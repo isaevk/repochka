@@ -47,9 +47,9 @@ final class PlayerVC: UIViewController {
     }
     
     private func setupUI() {
-        [trackImageView, hideButton, shareButton, albumTitleLabel, trackTitleLabel, authorTitleLabel, currentTimeSlider, previosTrackButton, playPauseButton, nextTrackButton, currentTimeLabel, durationLabel].forEach{ view.addSubview($0) }
-        
-        [trackImageView, hideButton, shareButton, albumTitleLabel, trackTitleLabel, authorTitleLabel, currentTimeSlider, previosTrackButton, playPauseButton, nextTrackButton, currentTimeLabel, durationLabel].forEach{ $0.translatesAutoresizingMaskIntoConstraints = false }
+        [trackImageView, hideButton, shareButton, albumTitleLabel, trackTitleLabel, authorTitleLabel, currentTimeSlider, previosTrackButton, playPauseButton, nextTrackButton, currentTimeLabel, durationLabel].forEach{
+            view.addSubview($0)
+            $0.translatesAutoresizingMaskIntoConstraints = false }
         
         NSLayoutConstraint.activate([
             hideButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
@@ -102,8 +102,8 @@ final class PlayerVC: UIViewController {
             try AVAudioSession.sharedInstance().setMode(.default)
             try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
             
-            guard let audioPath = audioPath else { return }
-            player = try AVAudioPlayer(contentsOf: URL(string: audioPath)!)
+            guard let audioPathURL = URL(string: audioPath!) else { return }
+            player = try AVAudioPlayer(contentsOf: audioPathURL)
             
             player.play()
             
@@ -141,7 +141,7 @@ final class PlayerVC: UIViewController {
         currentTimeSlider.addTarget(self, action: #selector(playbackSliderValueChanged), for: .valueChanged)
     }
     
-    @objc func playbackSliderValueChanged(_ playbackSlider: UISlider) {
+    @objc private func playbackSliderValueChanged(_ playbackSlider: UISlider) {
         player.currentTime = Double(currentTimeSlider.value) * player.duration
         updateTime()
     }
@@ -158,17 +158,17 @@ final class PlayerVC: UIViewController {
         }
     }
     
-    @objc func dragDownButtonTapped(_ sender: Any) {
+    @objc private func dragDownButtonTapped(_ sender: Any) {
         dismiss(animated: true)
     }
     
-    @objc func shareButtonTapped(_ sender: Any) {
+    @objc private func shareButtonTapped(_ sender: Any) {
         guard let image = UIImage(systemName: "bell"), let url = URL(string: "https://www.google.com") else { return }
         let activityVC = UIActivityViewController(activityItems: [image, url], applicationActivities: nil)
         present(activityVC, animated: true)
     }
     
-    @objc func previosTrack(_ sender: Any) {
+    @objc private func previosTrack(_ sender: Any) {
         if position > -1 {
             position -= 1
             player.stop()
@@ -180,7 +180,7 @@ final class PlayerVC: UIViewController {
         }
     }
     
-    @objc func nextTrack(_ sender: Any) {
+    @objc private func nextTrack(_ sender: Any) {
         if position < (songs.count - 1) {
             position += 1
             player.stop()
@@ -192,8 +192,8 @@ final class PlayerVC: UIViewController {
         }
     }
     
-    @objc func playPouseAction(_ sender: Any) {
-        if player.isPlaying == true {
+    @objc private func playPouseAction(_ sender: Any) {
+        if player.isPlaying {
             player.pause()
             playPauseButton.setImage(UIImage(named: "play"), for: .normal)
             UIView.animate(withDuration: 0.2, animations: {

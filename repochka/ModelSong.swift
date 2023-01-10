@@ -8,9 +8,9 @@
 import Foundation
 
 struct Song {
-    var name: String
-    var albumName: String
-    var artistName: String
-    var imageName: String
-    var trackName: String
+    let name: String
+    let albumName: String
+    let artistName: String
+    let imageName: String
+    let trackName: String
 }

@@ -11,9 +11,9 @@ final class PlistVC: UIViewController {
     
     private var songs = [Song]()
     
-    @IBOutlet weak var firstButton: UIButton!
-    @IBOutlet weak var secondButton: UIButton!
-    @IBOutlet weak var thirdButton: UIButton!
+    @IBOutlet private var firstButton: UIButton!
+    @IBOutlet private var secondButton: UIButton!
+    @IBOutlet private var thirdButton: UIButton!
     
     
     override func viewDidLoad() {

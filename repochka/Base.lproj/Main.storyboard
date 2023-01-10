@@ -128,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="236" y="25"/>
         </scene>
-        <!--View Controller-->
+        <!--PlayerVC-->
         <scene sceneID="12b-0A-hup">
             <objects>
-                <viewController storyboardIdentifier="player" id="QfZ-ir-wkl" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="player" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QfZ-ir-wkl" customClass="PlayerVC" customModule="repochka" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q3c-dZ-K5P">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
